@@ -85,7 +85,7 @@ export default function BookAdventurePage() {
         {/* ── Hero ─────────────────────────────────────────────────────── */}
         <section className="relative overflow-hidden bg-slate-900 py-32 text-white">
           <Image
-            src="/ingested/cruisingadventuresltd/img-003.webp"
+            src="/ingested/cruisingadventuresltd/img-025.webp"
             alt="Book a speedboat adventure in Nassau Bahamas"
             fill
             className="object-cover opacity-40"

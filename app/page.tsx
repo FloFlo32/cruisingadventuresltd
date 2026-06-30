@@ -1,11 +1,30 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Anchor, Camera, Music, Shield, Star, MapPin, Phone, ChevronDown } from "lucide-react";
+import { Anchor, Camera, Music, Shield, Star, MapPin, Phone, ChevronDown, Play } from "lucide-react";
 import { Navbar } from "@/components/sections/navbar";
 import { Footer } from "@/components/sections/footer";
 import { ImageCard } from "@/components/magic/image-card";
 import { Gallery } from "@/components/magic/gallery";
 import { Reveal, RevealGroup } from "@/components/magic/reveal";
+
+// YouTube-thumbnail "video" cards from the real site's Book An Adventure section
+const videoCards = [
+  {
+    src: "/ingested/cruisingadventuresltd/img-025.webp",
+    title: "Be Your Own Captain",
+    href: "/book-an-adventure",
+  },
+  {
+    src: "/ingested/cruisingadventuresltd/img-026.webp",
+    title: "Ultimate Nassau Adventure",
+    href: "/book-an-adventure",
+  },
+  {
+    src: "/ingested/cruisingadventuresltd/img-027.webp",
+    title: "Swimming With Pigs",
+    href: "/book-an-adventure",
+  },
+];
 
 const adventures = [
   {
@@ -14,8 +33,8 @@ const adventures = [
     description:
       "Take the helm of your own 2-seater speedboat and explore Nassau's crystal-clear waters. Our expert guides lead you to the best snorkeling spots in the Bahamas.",
     href: "/book-an-adventure",
-    src: "/ingested/cruisingadventuresltd/img-004.webp",
-    alt: "Speedboat riding in Nassau Bahamas",
+    src: "/ingested/cruisingadventuresltd/img-010.webp",
+    alt: "Woman on speedboat Nassau Bahamas turquoise water",
   },
   {
     eyebrow: "Wild Experience",
@@ -23,8 +42,8 @@ const adventures = [
     description:
       "Visit the famous Pig Beach and swim with the friendly swimming pigs of the Bahamas. An unforgettable bucket-list experience for the whole family.",
     href: "/book-an-adventure",
-    src: "/ingested/cruisingadventuresltd/img-025.webp",
-    alt: "Swimming pigs on the beach in Nassau Bahamas",
+    src: "/ingested/cruisingadventuresltd/img-027.webp",
+    alt: "Swimming pigs on the beach Nassau Bahamas",
   },
   {
     eyebrow: "Combo Package",
@@ -32,8 +51,8 @@ const adventures = [
     description:
       "The best of both worlds: thrill-seeking ATV rides through Nassau followed by an exhilarating speedboat cruise across the stunning Bahamian waters.",
     href: "/book-an-adventure",
-    src: "/ingested/cruisingadventuresltd/img-040.webp",
-    alt: "ATV and speedboat adventure combo in Nassau",
+    src: "/ingested/cruisingadventuresltd/img-026.webp",
+    alt: "ATV and speedboat adventure combo Nassau Bahamas",
   },
   {
     eyebrow: "For Couples",
@@ -41,7 +60,7 @@ const adventures = [
     description:
       "A bespoke romantic adventure on the water, crafted for couples. Enjoy a private speedboat experience with breathtaking views and unforgettable memories.",
     href: "/love-birds",
-    src: "/ingested/cruisingadventuresltd/img-010.webp",
+    src: "/ingested/cruisingadventuresltd/img-007.webp",
     alt: "Romantic couples speedboat tour Nassau Bahamas",
   },
 ];
@@ -89,29 +108,27 @@ const faqs = [
 ];
 
 const galleryImages = [
-  "/ingested/cruisingadventuresltd/img-030.webp",
-  "/ingested/cruisingadventuresltd/img-031.webp",
-  "/ingested/cruisingadventuresltd/img-032.webp",
-  "/ingested/cruisingadventuresltd/img-033.webp",
+  "/ingested/cruisingadventuresltd/img-013.webp",
+  "/ingested/cruisingadventuresltd/img-011.webp",
+  "/ingested/cruisingadventuresltd/img-007.webp",
+  "/ingested/cruisingadventuresltd/img-029.webp",
   "/ingested/cruisingadventuresltd/img-034.webp",
-  "/ingested/cruisingadventuresltd/img-035.webp",
-  "/ingested/cruisingadventuresltd/img-036.webp",
-  "/ingested/cruisingadventuresltd/img-037.webp",
-  "/ingested/cruisingadventuresltd/img-038.webp",
-  "/ingested/cruisingadventuresltd/img-039.webp",
   "/ingested/cruisingadventuresltd/img-041.webp",
-  "/ingested/cruisingadventuresltd/img-042.webp",
+  "/ingested/cruisingadventuresltd/img-044.webp",
+  "/ingested/cruisingadventuresltd/img-049.webp",
+  "/ingested/cruisingadventuresltd/img-022.webp",
+  "/ingested/cruisingadventuresltd/img-023.webp",
+  "/ingested/cruisingadventuresltd/img-024.webp",
+  "/ingested/cruisingadventuresltd/img-005.webp",
 ].map((src, i) => ({ src, alt: `Cruising Adventures Nassau Bahamas experience ${i + 1}` }));
 
 const partyImages = [
-  "/ingested/cruisingadventuresltd/img-050.webp",
-  "/ingested/cruisingadventuresltd/img-051.webp",
-  "/ingested/cruisingadventuresltd/img-052.webp",
-  "/ingested/cruisingadventuresltd/img-053.webp",
-  "/ingested/cruisingadventuresltd/img-054.webp",
-  "/ingested/cruisingadventuresltd/img-055.webp",
-  "/ingested/cruisingadventuresltd/img-056.webp",
-  "/ingested/cruisingadventuresltd/img-057.webp",
+  "/ingested/cruisingadventuresltd/img-034.webp",
+  "/ingested/cruisingadventuresltd/img-026.webp",
+  "/ingested/cruisingadventuresltd/img-029.webp",
+  "/ingested/cruisingadventuresltd/img-041.webp",
+  "/ingested/cruisingadventuresltd/img-044.webp",
+  "/ingested/cruisingadventuresltd/img-049.webp",
 ].map((src, i) => ({ src, alt: `Party event Nassau Bahamas ${i + 1}` }));
 
 export default function HomePage() {
@@ -119,18 +136,31 @@ export default function HomePage() {
     <>
       <Navbar />
       <main>
-        {/* ── Hero ─────────────────────────────────────────────────────── */}
+        {/* ── Hero with Video Background ────────────────────────────────── */}
         <section className="relative min-h-screen overflow-hidden bg-slate-900">
+          {/* Background poster image — shown while/if video loads */}
           <Image
-            src="/ingested/cruisingadventuresltd/img-001.webp"
-            alt="Speedboat riding in Nassau Bahamas crystal clear waters"
+            src="/ingested/cruisingadventuresltd/img-010.webp"
+            alt="Woman on speedboat Nassau Bahamas crystal clear waters"
             fill
-            className="object-cover opacity-50"
+            className="object-cover opacity-60"
             priority
             sizes="100vw"
-            quality={80}
+            quality={85}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/40 via-slate-900/20 to-slate-900/80" />
+
+          {/* YouTube video background — muted autoplay loop */}
+          <div className="absolute inset-0 pointer-events-none overflow-hidden">
+            <iframe
+              src="https://www.youtube.com/embed/videoseries?list=PLnFgLPXmGMp7Igi1iBbJoq0yXF5B6_9h0&autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&playsinline=1&enablejsapi=1"
+              allow="autoplay; encrypted-media"
+              className="absolute w-[177.78vh] h-[56.25vw] min-w-full min-h-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-60"
+              style={{ border: "none" }}
+              title="Cruising Adventures background video"
+            />
+          </div>
+
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/50 via-slate-900/20 to-slate-900/80" />
 
           <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-6 pb-24 pt-32 text-center text-white">
             <Reveal>
@@ -195,8 +225,52 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* ── Book an Adventure (Video Cards) ──────────────────────────── */}
+        <section className="bg-white py-16">
+          <div className="container-px mx-auto max-w-7xl">
+            <Reveal>
+              <div className="text-center mb-10">
+                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+                  Book An Adventure
+                </span>
+                <h2 className="mt-3 font-display text-4xl font-bold">
+                  Choose Your Ride
+                </h2>
+              </div>
+            </Reveal>
+            <RevealGroup className="grid gap-6 sm:grid-cols-3">
+              {videoCards.map((v) => (
+                <Link
+                  key={v.title}
+                  href={v.href}
+                  className="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer block"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={v.src}
+                    alt={v.title}
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    style={{ aspectRatio: "16/9" }}
+                  />
+                  <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors" />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
+                    <div className="grid size-14 place-items-center rounded-full bg-white/90 shadow-lg transition-transform duration-300 group-hover:scale-110">
+                      <Play className="size-6 text-primary fill-primary ml-0.5" />
+                    </div>
+                    <span className="font-display text-lg font-bold text-white drop-shadow-lg text-center px-4">
+                      {v.title}
+                    </span>
+                  </div>
+                </Link>
+              ))}
+            </RevealGroup>
+          </div>
+        </section>
+
         {/* ── About ────────────────────────────────────────────────────── */}
-        <section id="about" className="bg-white py-24">
+        <section id="about" className="bg-accent/20 py-24">
           <div className="container-px mx-auto max-w-7xl">
             <div className="grid items-center gap-16 lg:grid-cols-2">
               <Reveal>
@@ -226,7 +300,7 @@ export default function HomePage() {
                       { n: "100%", label: "Safety Record" },
                       { n: "5 Stars", label: "Guest Rating" },
                     ].map((s) => (
-                      <div key={s.label} className="rounded-2xl border border-border bg-accent/50 p-5">
+                      <div key={s.label} className="rounded-2xl border border-border bg-card p-5">
                         <p className="font-display text-3xl font-bold text-primary">{s.n}</p>
                         <p className="mt-1 text-sm text-muted-foreground">{s.label}</p>
                       </div>
@@ -240,8 +314,8 @@ export default function HomePage() {
                   <div className="overflow-hidden rounded-2xl shadow-lg">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src="/ingested/cruisingadventuresltd/img-005.webp"
-                      alt="Speedboat adventure Nassau"
+                      src="/ingested/cruisingadventuresltd/img-007.webp"
+                      alt="Couple on speedboat Nassau"
                       loading="lazy"
                       decoding="async"
                       className="w-full object-cover"
@@ -250,8 +324,8 @@ export default function HomePage() {
                   <div className="overflow-hidden rounded-2xl shadow-lg">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src="/ingested/cruisingadventuresltd/img-009.webp"
-                      alt="Snorkeling Nassau Bahamas"
+                      src="/ingested/cruisingadventuresltd/img-013.webp"
+                      alt="Woman on speedboat Nassau Bahamas"
                       loading="lazy"
                       decoding="async"
                       className="w-full object-cover"
@@ -262,8 +336,8 @@ export default function HomePage() {
                   <div className="overflow-hidden rounded-2xl shadow-lg">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src="/ingested/cruisingadventuresltd/img-019.webp"
-                      alt="Swimming pigs Bahamas"
+                      src="/ingested/cruisingadventuresltd/img-011.webp"
+                      alt="Woman on boat Nassau Bahamas"
                       loading="lazy"
                       decoding="async"
                       className="w-full object-cover"
@@ -272,8 +346,8 @@ export default function HomePage() {
                   <div className="overflow-hidden rounded-2xl shadow-lg">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
-                      src="/ingested/cruisingadventuresltd/img-020.webp"
-                      alt="ATV adventure Nassau"
+                      src="/ingested/cruisingadventuresltd/img-027.webp"
+                      alt="Swimming pigs Nassau Bahamas"
                       loading="lazy"
                       decoding="async"
                       className="w-full object-cover"
@@ -286,7 +360,7 @@ export default function HomePage() {
         </section>
 
         {/* ── Why Choose Us ────────────────────────────────────────────── */}
-        <section className="bg-accent/30 py-20">
+        <section className="bg-white py-20">
           <div className="container-px mx-auto max-w-7xl">
             <Reveal>
               <div className="text-center">
@@ -316,7 +390,7 @@ export default function HomePage() {
         </section>
 
         {/* ── Adventure Packages ───────────────────────────────────────── */}
-        <section id="adventures" className="bg-white py-24">
+        <section id="adventures" className="bg-accent/20 py-24">
           <div className="container-px mx-auto max-w-7xl">
             <Reveal>
               <div className="text-center">
@@ -432,7 +506,7 @@ export default function HomePage() {
               <div className="lg:col-span-2 overflow-hidden rounded-3xl shadow-lg">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/ingested/cruisingadventuresltd/img-050.webp"
+                  src="/ingested/cruisingadventuresltd/img-034.webp"
                   alt="Group party on speedboat Nassau Bahamas"
                   loading="lazy"
                   decoding="async"
@@ -604,10 +678,10 @@ export default function HomePage() {
 
         {/* ── CTA Banner ───────────────────────────────────────────────── */}
         <section className="relative overflow-hidden bg-primary py-20 text-white">
-          <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 opacity-20">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/ingested/cruisingadventuresltd/img-002.webp"
+              src="/ingested/cruisingadventuresltd/img-049.webp"
               alt=""
               aria-hidden="true"
               className="h-full w-full object-cover"

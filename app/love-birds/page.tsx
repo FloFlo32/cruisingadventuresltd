@@ -31,15 +31,16 @@ const highlights = [
   },
 ];
 
+// Real couple/romance images from the site — people only, no logos
 const coupleImages = [
+  "/ingested/cruisingadventuresltd/img-007.webp",
   "/ingested/cruisingadventuresltd/img-010.webp",
   "/ingested/cruisingadventuresltd/img-011.webp",
+  "/ingested/cruisingadventuresltd/img-013.webp",
   "/ingested/cruisingadventuresltd/img-014.webp",
   "/ingested/cruisingadventuresltd/img-015.webp",
   "/ingested/cruisingadventuresltd/img-016.webp",
   "/ingested/cruisingadventuresltd/img-017.webp",
-  "/ingested/cruisingadventuresltd/img-018.webp",
-  "/ingested/cruisingadventuresltd/img-021.webp",
 ].map((src, i) => ({ src, alt: `Romantic couples adventure Nassau Bahamas ${i + 1}` }));
 
 export default function LoveBirdsPage() {
@@ -47,18 +48,18 @@ export default function LoveBirdsPage() {
     <>
       <Navbar />
       <main>
-        {/* ── Hero ─────────────────────────────────────────────────────── */}
+        {/* ── Hero — couple on speedboat ────────────────────────────────── */}
         <section className="relative overflow-hidden bg-slate-900 py-32 text-white">
           <Image
-            src="/ingested/cruisingadventuresltd/img-010.webp"
-            alt="Romantic couples speedboat adventure Nassau Bahamas"
+            src="/ingested/cruisingadventuresltd/img-007.webp"
+            alt="Romantic couple on speedboat Nassau Bahamas turquoise water"
             fill
-            className="object-cover opacity-40"
+            className="object-cover opacity-55"
             priority
             sizes="100vw"
-            quality={80}
+            quality={85}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/50 to-slate-900/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/40 to-slate-900/80" />
           <div className="container-px relative z-10 mx-auto max-w-4xl text-center">
             <Reveal>
               <div className="flex items-center justify-center gap-2">
@@ -122,7 +123,7 @@ export default function LoveBirdsPage() {
           </div>
         </section>
 
-        {/* ── Experience Description ───────────────────────────────────── */}
+        {/* ── Experience — split layout ─────────────────────────────────── */}
         <section className="bg-accent/20 py-24">
           <div className="container-px mx-auto max-w-7xl">
             <div className="grid items-center gap-16 lg:grid-cols-2">
@@ -179,15 +180,30 @@ export default function LoveBirdsPage() {
                 </div>
               </Reveal>
 
-              <div className="overflow-hidden rounded-3xl shadow-xl">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/ingested/cruisingadventuresltd/img-011.webp"
-                  alt="Couples romantic speedboat experience Nassau Bahamas"
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full object-cover"
-                />
+              {/* Stacked couple images */}
+              <div className="grid grid-cols-2 gap-4">
+                <div className="overflow-hidden rounded-2xl shadow-lg">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/ingested/cruisingadventuresltd/img-010.webp"
+                    alt="Woman on speedboat Nassau Bahamas"
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover"
+                    style={{ minHeight: "260px" }}
+                  />
+                </div>
+                <div className="mt-8 overflow-hidden rounded-2xl shadow-lg">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/ingested/cruisingadventuresltd/img-011.webp"
+                    alt="Woman on boat Nassau Bahamas"
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover"
+                    style={{ minHeight: "260px" }}
+                  />
+                </div>
               </div>
             </div>
           </div>

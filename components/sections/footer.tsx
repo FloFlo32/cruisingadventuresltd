@@ -5,7 +5,7 @@ import { InstagramIcon, FacebookIcon } from "@/components/icons";
 import { brand } from "@/brand.config";
 
 const explore = [
-  { label: "About Us", href: "/#about" },
+  { label: "Home", href: "/" },
   { label: "Book an Adventure", href: "/book-an-adventure" },
   { label: "Love Birds", href: "/love-birds" },
   { label: "Gallery", href: "/gallery" },
@@ -30,7 +30,7 @@ export function Footer() {
               alt={`${brand.name} logo`}
               width={150}
               height={52}
-              className="h-14 w-auto object-contain brightness-0 invert"
+              className="h-14 w-auto object-contain"
             />
           </Link>
           <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-400">

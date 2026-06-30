@@ -15,6 +15,7 @@
  */
 import { execSync } from "node:child_process";
 import { existsSync, accessSync } from "node:fs";
+import { mkdir, writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
@@ -136,6 +137,7 @@ sh("git push -u origin main --force");
 // ── 4. Vercel project + deploy ──────────────────────────────────────────────
 step(4, "Linking & deploying to Vercel");
 const proj = await vercel(`/v9/projects/${repo}`);
+let projectId, orgId;
 if (!proj.ok) {
   if (!DRY) {
     const made = await vercel("/v11/projects", {
@@ -148,10 +150,30 @@ if (!proj.ok) {
     });
     if (!made.ok) die(`Failed to create Vercel project (${made.status}): ${made.json.error?.message}`);
     console.log(`    ${c.green("✓")} project created & connected to GitHub`);
+    projectId = made.json.id;
+    orgId = made.json.accountId;
   }
 } else {
   console.log(`    ${c.dim("Vercel project exists — reusing")}`);
+  projectId = proj.json.id;
+  orgId = proj.json.accountId;
 }
+
+// Pin the local CLI link to the project we just resolved above. Never trust a
+// pre-existing .vercel/project.json: this starter folder gets reused across
+// different ideas/<slug> builds, and `vercel deploy` silently deploys to
+// whatever project is linked here, regardless of brand.config's domain. A
+// stale link is how one site's `/deploy` can overwrite a completely different
+// <slug>.getyetti.com that was deployed earlier from this same folder.
+if (!DRY && projectId) {
+  await mkdir(join(root, ".vercel"), { recursive: true });
+  await writeFile(
+    join(root, ".vercel", "project.json"),
+    JSON.stringify({ projectId, orgId, projectName: repo }, null, 2) + "\n"
+  );
+  console.log(`    ${c.dim(`linked .vercel/project.json -> ${repo} (${projectId})`)}`);
+}
+
 // Trigger a production deploy from the connected repo via the CLI (handles upload).
 const team = process.env.VERCEL_TEAM ? ` --scope ${process.env.VERCEL_TEAM}` : "";
 sh(`npx --yes vercel@latest deploy --prod --yes --token ${process.env.VERCEL_TOKEN}${team}`, {

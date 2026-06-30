@@ -9,7 +9,7 @@ import { brand } from "@/brand.config";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { href: "/#about", label: "About" },
+  { href: "/", label: "Home" },
   { href: "/book-an-adventure", label: "Book Adventure" },
   { href: "/love-birds", label: "Love Birds" },
   { href: "/gallery", label: "Gallery" },

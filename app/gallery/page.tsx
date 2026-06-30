@@ -12,49 +12,45 @@ export const metadata: Metadata = {
     "Browse photos and videos of speedboat riding, snorkeling, swimming with pigs, and ATV adventures in Nassau, Bahamas.",
 };
 
+// People-only images — confirmed by visual inspection
 const speedboatImages = [
-  "/ingested/cruisingadventuresltd/img-004.webp",
-  "/ingested/cruisingadventuresltd/img-005.webp",
-  "/ingested/cruisingadventuresltd/img-006.webp",
+  "/ingested/cruisingadventuresltd/img-010.webp",
   "/ingested/cruisingadventuresltd/img-007.webp",
-  "/ingested/cruisingadventuresltd/img-008.webp",
-  "/ingested/cruisingadventuresltd/img-009.webp",
+  "/ingested/cruisingadventuresltd/img-013.webp",
+  "/ingested/cruisingadventuresltd/img-011.webp",
   "/ingested/cruisingadventuresltd/img-022.webp",
   "/ingested/cruisingadventuresltd/img-023.webp",
   "/ingested/cruisingadventuresltd/img-024.webp",
-  "/ingested/cruisingadventuresltd/img-026.webp",
-  "/ingested/cruisingadventuresltd/img-027.webp",
+  "/ingested/cruisingadventuresltd/img-006.webp",
+  "/ingested/cruisingadventuresltd/img-008.webp",
+  "/ingested/cruisingadventuresltd/img-009.webp",
+  "/ingested/cruisingadventuresltd/img-025.webp",
   "/ingested/cruisingadventuresltd/img-028.webp",
 ].map((src, i) => ({ src, alt: `Speedboat riding Nassau Bahamas ${i + 1}` }));
 
 const pigIslandImages = [
-  "/ingested/cruisingadventuresltd/img-025.webp",
+  "/ingested/cruisingadventuresltd/img-027.webp",
   "/ingested/cruisingadventuresltd/img-029.webp",
-  "/ingested/cruisingadventuresltd/img-030.webp",
-  "/ingested/cruisingadventuresltd/img-031.webp",
+  "/ingested/cruisingadventuresltd/img-049.webp",
+  "/ingested/cruisingadventuresltd/img-044.webp",
 ].map((src, i) => ({ src, alt: `Swimming with pigs Nassau Bahamas ${i + 1}` }));
 
 const atvImages = [
-  "/ingested/cruisingadventuresltd/img-040.webp",
+  "/ingested/cruisingadventuresltd/img-026.webp",
   "/ingested/cruisingadventuresltd/img-041.webp",
   "/ingested/cruisingadventuresltd/img-042.webp",
   "/ingested/cruisingadventuresltd/img-043.webp",
-  "/ingested/cruisingadventuresltd/img-044.webp",
-  "/ingested/cruisingadventuresltd/img-045.webp",
 ].map((src, i) => ({ src, alt: `ATV adventure Nassau Bahamas ${i + 1}` }));
 
 const partyImages = [
-  "/ingested/cruisingadventuresltd/img-050.webp",
-  "/ingested/cruisingadventuresltd/img-051.webp",
-  "/ingested/cruisingadventuresltd/img-052.webp",
-  "/ingested/cruisingadventuresltd/img-053.webp",
-  "/ingested/cruisingadventuresltd/img-054.webp",
-  "/ingested/cruisingadventuresltd/img-055.webp",
-  "/ingested/cruisingadventuresltd/img-056.webp",
-  "/ingested/cruisingadventuresltd/img-057.webp",
-  "/ingested/cruisingadventuresltd/img-058.webp",
-  "/ingested/cruisingadventuresltd/img-059.webp",
-  "/ingested/cruisingadventuresltd/img-060.webp",
+  "/ingested/cruisingadventuresltd/img-034.webp",
+  "/ingested/cruisingadventuresltd/img-045.webp",
+  "/ingested/cruisingadventuresltd/img-049.webp",
+  "/ingested/cruisingadventuresltd/img-029.webp",
+  "/ingested/cruisingadventuresltd/img-014.webp",
+  "/ingested/cruisingadventuresltd/img-015.webp",
+  "/ingested/cruisingadventuresltd/img-016.webp",
+  "/ingested/cruisingadventuresltd/img-017.webp",
 ].map((src, i) => ({ src, alt: `Group party event Nassau Bahamas ${i + 1}` }));
 
 const categories = [
