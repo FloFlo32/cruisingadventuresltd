@@ -1,20 +1,15 @@
 /**
- * Fonts are loaded with next/font (zero layout shift, self-hosted, no FOUT).
- *
- * next/font requires STATIC imports — it can't read a runtime variable — so the
- * font names here are kept in sync with brand.config.ts by `npm run brand`,
- * which rewrites the block between the markers below. To change fonts: edit
- * brand.config.ts → run `npm run brand`.  (Or just edit here directly.)
+ * Fonts loaded with next/font — zero layout shift, self-hosted, no FOUT.
  */
 // brand:fonts:start
-import { Space_Grotesk, Geist, JetBrains_Mono } from "next/font/google";
+import { Playfair_Display, DM_Sans, JetBrains_Mono } from "next/font/google";
 
-export const fontDisplay = Space_Grotesk({
+export const fontDisplay = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
 });
-export const fontSans = Geist({
+export const fontSans = DM_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",

@@ -1,0 +1,216 @@
+{
+  "source": "https://cruisingadventuresltd.com",
+  "ingestedFromHost": "cruisingadventuresltd.com",
+  "pagesCrawled": 9,
+  "name": "Cruising Adventures",
+  "tagline": "Cruising Adventure - Let me drive own speed boat, ATV, Snorkeling",
+  "description": "Experience the most popular water activity in Nassau Bahamas with speed boat riding , swimming with pigs, ATV tour and snorkel guided tour.",
+  "domain": "cruisingadventuresltd.com",
+  "brandColor": {
+    "hex": "#5d55fa",
+    "src": "css-frequency",
+    "oklchHue": 278
+  },
+  "theme": {
+    "hue": 278
+  },
+  "fonts": [
+    "Open Sans"
+  ],
+  "logo": "assets/logo.webp",
+  "logoNote": null,
+  "favicon": "https://cruisingadventuresltd.com/wp-content/uploads/2016/05/cruising-1.png",
+  "images": [
+    "/ingested/cruisingadventuresltd/img-001.webp",
+    "/ingested/cruisingadventuresltd/img-002.webp",
+    "/ingested/cruisingadventuresltd/img-004.webp",
+    "/ingested/cruisingadventuresltd/img-005.webp",
+    "/ingested/cruisingadventuresltd/img-006.webp",
+    "/ingested/cruisingadventuresltd/img-007.webp",
+    "/ingested/cruisingadventuresltd/img-008.webp",
+    "/ingested/cruisingadventuresltd/img-009.webp",
+    "/ingested/cruisingadventuresltd/img-010.webp",
+    "/ingested/cruisingadventuresltd/img-011.webp",
+    "/ingested/cruisingadventuresltd/img-013.webp",
+    "/ingested/cruisingadventuresltd/img-014.webp",
+    "/ingested/cruisingadventuresltd/img-015.webp",
+    "/ingested/cruisingadventuresltd/img-016.webp",
+    "/ingested/cruisingadventuresltd/img-017.webp",
+    "/ingested/cruisingadventuresltd/img-018.webp",
+    "/ingested/cruisingadventuresltd/img-019.webp",
+    "/ingested/cruisingadventuresltd/img-020.webp",
+    "/ingested/cruisingadventuresltd/img-021.webp",
+    "/ingested/cruisingadventuresltd/img-022.webp",
+    "/ingested/cruisingadventuresltd/img-023.webp",
+    "/ingested/cruisingadventuresltd/img-024.webp",
+    "/ingested/cruisingadventuresltd/img-025.webp",
+    "/ingested/cruisingadventuresltd/img-026.webp",
+    "/ingested/cruisingadventuresltd/img-027.webp",
+    "/ingested/cruisingadventuresltd/img-028.webp",
+    "/ingested/cruisingadventuresltd/img-029.webp",
+    "/ingested/cruisingadventuresltd/img-030.webp",
+    "/ingested/cruisingadventuresltd/img-031.webp",
+    "/ingested/cruisingadventuresltd/img-032.webp",
+    "/ingested/cruisingadventuresltd/img-033.webp",
+    "/ingested/cruisingadventuresltd/img-034.webp",
+    "/ingested/cruisingadventuresltd/img-035.webp",
+    "/ingested/cruisingadventuresltd/img-036.webp",
+    "/ingested/cruisingadventuresltd/img-037.webp",
+    "/ingested/cruisingadventuresltd/img-038.webp",
+    "/ingested/cruisingadventuresltd/img-039.webp",
+    "/ingested/cruisingadventuresltd/img-040.webp",
+    "/ingested/cruisingadventuresltd/img-041.webp",
+    "/ingested/cruisingadventuresltd/img-042.webp",
+    "/ingested/cruisingadventuresltd/img-043.webp",
+    "/ingested/cruisingadventuresltd/img-044.webp",
+    "/ingested/cruisingadventuresltd/img-045.webp",
+    "/ingested/cruisingadventuresltd/img-046.webp",
+    "/ingested/cruisingadventuresltd/img-047.webp",
+    "/ingested/cruisingadventuresltd/img-048.jpg",
+    "/ingested/cruisingadventuresltd/img-049.webp",
+    "/ingested/cruisingadventuresltd/img-050.webp",
+    "/ingested/cruisingadventuresltd/img-051.webp",
+    "/ingested/cruisingadventuresltd/img-052.webp",
+    "/ingested/cruisingadventuresltd/img-053.webp",
+    "/ingested/cruisingadventuresltd/img-054.webp",
+    "/ingested/cruisingadventuresltd/img-055.webp",
+    "/ingested/cruisingadventuresltd/img-056.webp",
+    "/ingested/cruisingadventuresltd/img-057.webp",
+    "/ingested/cruisingadventuresltd/img-058.webp",
+    "/ingested/cruisingadventuresltd/img-059.webp",
+    "/ingested/cruisingadventuresltd/img-060.webp"
+  ],
+  "imageCount": 58,
+  "social": {
+    "email": "cruisingadventuresltd@gmail.com",
+    "instagram": "https://www.instagram.com/cruisingadventuresbahamas/"
+  },
+  "whatsapp": null,
+  "phone": "2428172944",
+  "location": {
+    "address": "Malcom Park East Bay Street (next to Antiki Floating Bar), Arawak Cay, North Nassau N.P, Bahamas",
+    "mapQuery": "Malcom Park East Bay Street (next to Antiki Floating Bar), Arawak Cay, North Nassau N.P, Bahamas"
+  },
+  "sectionOrder": [
+    "About Cruising Adventures",
+    "Cruising Adventures",
+    "Photography and Videography",
+    "Party Mode On!",
+    "Guider's Replay"
+  ],
+  "navItems": [
+    {
+      "text": "Cruising Adventures Toggle Navigation AboutBook AdventureLove BirdsGalleryRelive MemoriesContact UsBlog account_circle Login account_circle",
+      "url": "https://cruisingadventuresltd.com/undefined",
+      "path": "/undefined"
+    },
+    {
+      "text": "Book Adventure",
+      "url": "https://cruisingadventuresltd.com/book-an-adventure/",
+      "path": "/book-an-adventure"
+    },
+    {
+      "text": "Love Birds",
+      "url": "https://cruisingadventuresltd.com/love-birds/",
+      "path": "/love-birds"
+    },
+    {
+      "text": "Gallery",
+      "url": "https://cruisingadventuresltd.com/gallery/",
+      "path": "/gallery"
+    },
+    {
+      "text": "Contact Us",
+      "url": "https://cruisingadventuresltd.com/contact/",
+      "path": "/contact"
+    },
+    {
+      "text": "Blog",
+      "url": "https://cruisingadventuresltd.com/blog/",
+      "path": "/blog"
+    },
+    {
+      "text": "account_circle Login",
+      "url": "https://cruisingadventuresltd.com/login",
+      "path": "/login"
+    },
+    {
+      "text": "Privacy & Security Policy",
+      "url": "https://cruisingadventuresltd.com/privacy-security-policy/",
+      "path": "/privacy-security-policy"
+    },
+    {
+      "text": "Terms and conditions",
+      "url": "https://cruisingadventuresltd.com/terms-and-conditions",
+      "path": "/terms-and-conditions"
+    }
+  ],
+  "footerItems": [
+    {
+      "text": "Blog",
+      "url": "https://cruisingadventuresltd.com/blog/",
+      "path": "/blog"
+    },
+    {
+      "text": "Contact Us",
+      "url": "https://cruisingadventuresltd.com/contact/",
+      "path": "/contact"
+    },
+    {
+      "text": "Privacy & Security Policy",
+      "url": "https://cruisingadventuresltd.com/privacy-security-policy/",
+      "path": "/privacy-security-policy"
+    },
+    {
+      "text": "Terms and conditions",
+      "url": "https://cruisingadventuresltd.com/terms-and-conditions",
+      "path": "/terms-and-conditions"
+    }
+  ],
+  "innerPages": [
+    {
+      "path": "/book-an-adventure/",
+      "title": "Book An Adventure - Cruising Adventures",
+      "sections": [
+        "Book An Adventure"
+      ]
+    },
+    {
+      "path": "/love-birds/",
+      "title": "Love Birds - Sea Adventure with love - Cruising Adventures",
+      "sections": [
+        "Love Birds"
+      ]
+    },
+    {
+      "path": "/gallery/",
+      "title": "Gallery of driving speedboat, ATV - Cruising Adventures",
+      "sections": [
+        "Gallery"
+      ]
+    },
+    {
+      "path": "/contact/",
+      "title": "Contact Us - Cruising Adventures",
+      "sections": [
+        "Contact Us",
+        "Get in Touch"
+      ]
+    },
+    {
+      "path": "/blog/",
+      "title": "Speedboat Riding, Snorkeling Blog - Cruising Adventures",
+      "sections": [
+        "Adventure Blog"
+      ]
+    },
+    {
+      "path": "/login",
+      "title": "Log In ‹ Cruising Adventures — WordPress",
+      "sections": [
+        "Log In",
+        "Powered by WordPress"
+      ]
+    }
+  ]
+}

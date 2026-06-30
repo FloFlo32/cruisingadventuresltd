@@ -1,95 +1,143 @@
+import Image from "next/image";
 import Link from "next/link";
-import { Mail } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
+import { InstagramIcon, FacebookIcon } from "@/components/icons";
 import { brand } from "@/brand.config";
-import { GitHubIcon, XIcon } from "@/components/icons";
 
-const cols = [
-  {
-    title: "Product",
-    links: [
-      { label: "Features", href: "#features" },
-      { label: "Why us", href: "#bento" },
-      { label: "Results", href: "#stats" },
-    ],
-  },
-  {
-    title: "Resources",
-    links: [
-      { label: "Get started", href: "#cta" },
-      { label: "Brand guide", href: "/brand-guide" },
-      { label: "Changelog", href: "#" },
-    ],
-  },
-  {
-    title: "Company",
-    links: [
-      { label: "About", href: "#" },
-      { label: "Privacy", href: "#" },
-      { label: "Terms", href: "#" },
-    ],
-  },
+const explore = [
+  { label: "About Us", href: "/#about" },
+  { label: "Book an Adventure", href: "/book-an-adventure" },
+  { label: "Love Birds", href: "/love-birds" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Blog", href: "/blog" },
+];
+
+const legal = [
+  { label: "Contact Us", href: "/contact" },
+  { label: "Privacy and Security Policy", href: "/privacy-security-policy" },
+  { label: "Terms and Conditions", href: "/terms-and-conditions" },
 ];
 
 export function Footer() {
   return (
-    <footer className="mt-auto border-t border-border/60">
-      <div className="container-px mx-auto grid max-w-6xl gap-10 py-14 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
+    <footer className="mt-auto bg-slate-900 text-slate-300">
+      <div className="container-px mx-auto grid max-w-7xl gap-10 py-16 md:grid-cols-[2fr_1fr_1fr_1.5fr]">
+        {/* Brand column */}
         <div>
-          <Link href="/" className="flex items-center gap-2 font-display text-lg font-bold">
-            <span className="grid size-8 place-items-center rounded-lg bg-primary text-primary-foreground">
-              {brand.name.charAt(0)}
-            </span>
-            {brand.name}
+          <Link href="/" aria-label={brand.name}>
+            <Image
+              src="/logo.png"
+              alt={`${brand.name} logo`}
+              width={150}
+              height={52}
+              className="h-14 w-auto object-contain brightness-0 invert"
+            />
           </Link>
-          <p className="mt-4 max-w-xs text-sm text-muted-foreground">
-            {brand.tagline}
+          <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-400">
+            {brand.description}
           </p>
           <div className="mt-5 flex gap-2">
-            <Link
-              href={`https://github.com/${brand.social.github}`}
-              aria-label="GitHub"
-              className="grid size-9 place-items-center rounded-lg border border-border/60 text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"
+            <a
+              href="https://www.instagram.com/cruisingadventuresbahamas/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="grid size-9 place-items-center rounded-lg border border-slate-700 text-slate-400 transition-colors hover:border-primary/60 hover:text-primary cursor-pointer"
             >
-              <GitHubIcon className="size-4" />
-            </Link>
-            <Link
-              href={`https://x.com/${brand.social.x}`}
-              aria-label="X"
-              className="grid size-9 place-items-center rounded-lg border border-border/60 text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"
+              <InstagramIcon className="size-4" />
+            </a>
+            <a
+              href="https://www.facebook.com/cruisingadventures"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="grid size-9 place-items-center rounded-lg border border-slate-700 text-slate-400 transition-colors hover:border-primary/60 hover:text-primary cursor-pointer"
             >
-              <XIcon className="size-4" />
-            </Link>
-            <Link
+              <FacebookIcon className="size-4" />
+            </a>
+            <a
               href={`mailto:${brand.social.email}`}
               aria-label="Email"
-              className="grid size-9 place-items-center rounded-lg border border-border/60 text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"
+              className="grid size-9 place-items-center rounded-lg border border-slate-700 text-slate-400 transition-colors hover:border-primary/60 hover:text-primary cursor-pointer"
             >
               <Mail className="size-4" />
-            </Link>
+            </a>
           </div>
         </div>
 
-        {cols.map((col) => (
-          <div key={col.title}>
-            <h4 className="font-display text-sm font-semibold">{col.title}</h4>
-            <ul className="mt-4 space-y-2.5">
-              {col.links.map((l) => (
-                <li key={l.label}>
-                  <Link
-                    href={l.href}
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                  >
-                    {l.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+        {/* Explore */}
+        <div>
+          <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-slate-100">
+            Explore
+          </h4>
+          <ul className="space-y-2.5">
+            {explore.map((l) => (
+              <li key={l.label}>
+                <Link
+                  href={l.href}
+                  className="text-sm text-slate-400 transition-colors hover:text-primary"
+                >
+                  {l.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Legal */}
+        <div>
+          <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-slate-100">
+            Company
+          </h4>
+          <ul className="space-y-2.5">
+            {legal.map((l) => (
+              <li key={l.label}>
+                <Link
+                  href={l.href}
+                  className="text-sm text-slate-400 transition-colors hover:text-primary"
+                >
+                  {l.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Contact */}
+        <div>
+          <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-slate-100">
+            Contact Us
+          </h4>
+          <ul className="space-y-4">
+            <li className="flex items-start gap-3">
+              <MapPin className="mt-0.5 size-4 shrink-0 text-primary" />
+              <span className="text-sm text-slate-400 leading-snug">{brand.contact.address}</span>
+            </li>
+            <li>
+              <a
+                href={`tel:+${brand.contact.phone}`}
+                className="flex items-center gap-3 text-sm text-slate-400 transition-colors hover:text-primary cursor-pointer"
+              >
+                <Phone className="size-4 shrink-0 text-primary" />
+                {brand.contact.phone}
+              </a>
+            </li>
+            <li>
+              <a
+                href={`mailto:${brand.social.email}`}
+                className="flex items-center gap-3 text-sm text-slate-400 transition-colors hover:text-primary cursor-pointer"
+              >
+                <Mail className="size-4 shrink-0 text-primary" />
+                {brand.social.email}
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div className="border-t border-border/60 py-6">
-        <p className="container-px mx-auto max-w-6xl text-sm text-muted-foreground">
-          © {brand.name}. Built on the {brand.name} starter pack.
+
+      <div className="border-t border-slate-800 py-6">
+        <p className="container-px mx-auto max-w-7xl text-sm text-slate-500">
+          &copy; {new Date().getFullYear()} {brand.name}. All rights reserved. Nassau, Bahamas.
         </p>
       </div>
     </footer>
