@@ -1,28 +1,29 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Anchor, Camera, Music, Shield, Star, MapPin, Phone, ChevronDown, Play } from "lucide-react";
+import { Anchor, Camera, Music, Shield, Star, MapPin, Phone, ChevronDown } from "lucide-react";
 import { Navbar } from "@/components/sections/navbar";
 import { Footer } from "@/components/sections/footer";
 import { ImageCard } from "@/components/magic/image-card";
 import { Gallery } from "@/components/magic/gallery";
+import { VideoCards } from "@/components/magic/video-cards";
 import { Reveal, RevealGroup } from "@/components/magic/reveal";
 
-// YouTube-thumbnail "video" cards from the real site's Book An Adventure section
+// Real clips from the customer's own site, played inline on click (not a navigation link)
 const videoCards = [
   {
-    src: "/ingested/cruisingadventuresltd/img-025.webp",
+    thumb: "/ingested/cruisingadventuresltd/img-025.webp",
+    video: "/videos/be-your-own-captain.mp4",
     title: "Be Your Own Captain",
-    href: "/book-an-adventure",
   },
   {
-    src: "/ingested/cruisingadventuresltd/img-026.webp",
+    thumb: "/ingested/cruisingadventuresltd/img-026.webp",
+    video: "/videos/ultimate-nassau-adventure.mp4",
     title: "Ultimate Nassau Adventure",
-    href: "/book-an-adventure",
   },
   {
-    src: "/ingested/cruisingadventuresltd/img-027.webp",
+    thumb: "/ingested/cruisingadventuresltd/img-027.webp",
+    video: "/videos/swimming-with-pigs.mp4",
     title: "Swimming With Pigs",
-    href: "/book-an-adventure",
   },
 ];
 
@@ -241,34 +242,9 @@ export default function HomePage() {
                 </h2>
               </div>
             </Reveal>
-            <RevealGroup className="grid gap-6 sm:grid-cols-3">
-              {videoCards.map((v) => (
-                <Link
-                  key={v.title}
-                  href={v.href}
-                  className="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer block"
-                >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={v.src}
-                    alt={v.title}
-                    loading="lazy"
-                    decoding="async"
-                    className="w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    style={{ aspectRatio: "16/9" }}
-                  />
-                  <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors" />
-                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
-                    <div className="grid size-14 place-items-center rounded-full bg-white/90 shadow-lg transition-transform duration-300 group-hover:scale-110">
-                      <Play className="size-6 text-primary fill-primary ml-0.5" />
-                    </div>
-                    <span className="font-display text-lg font-bold text-white drop-shadow-lg text-center px-4">
-                      {v.title}
-                    </span>
-                  </div>
-                </Link>
-              ))}
-            </RevealGroup>
+            <Reveal>
+              <VideoCards cards={videoCards} />
+            </Reveal>
           </div>
         </section>
 
