@@ -149,16 +149,19 @@ export default function HomePage() {
             quality={85}
           />
 
-          {/* YouTube video background — muted autoplay loop */}
-          <div className="absolute inset-0 pointer-events-none overflow-hidden">
-            <iframe
-              src="https://www.youtube.com/embed/videoseries?list=PLnFgLPXmGMp7Igi1iBbJoq0yXF5B6_9h0&autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&playsinline=1&enablejsapi=1"
-              allow="autoplay; encrypted-media"
-              className="absolute w-[177.78vh] h-[56.25vw] min-w-full min-h-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-60"
-              style={{ border: "none" }}
-              title="Cruising Adventures background video"
-            />
-          </div>
+          {/* Real Cruising Adventures footage — muted autoplay loop */}
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            poster="/ingested/cruisingadventuresltd/img-010.webp"
+            className="absolute inset-0 size-full object-cover opacity-60"
+            aria-hidden="true"
+          >
+            <source src="/videos/hero-background.mp4" type="video/mp4" />
+          </video>
 
           <div className="absolute inset-0 bg-gradient-to-b from-slate-900/50 via-slate-900/20 to-slate-900/80" />
 
