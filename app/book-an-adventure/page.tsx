@@ -19,7 +19,7 @@ const packages = [
     title: "Speedboat Tour",
     description:
       "Take the helm of your own 2-seater speedboat. Explore Nassau's crystal waters with our certified guide leading the way to the best spots.",
-    href: "/contact",
+    href: "/speedboat-snorkeling-tour",
     src: "/ingested/cruisingadventuresltd/img-006.webp",
     alt: "Self-drive speedboat tour Nassau Bahamas",
   },
@@ -28,7 +28,7 @@ const packages = [
     title: "Snorkeling Adventure",
     description:
       "Dive into Nassau's underwater world. Encounter colorful reef fish, coral formations, and the incredible marine life of the Bahamas.",
-    href: "/contact",
+    href: "/speedboat-snorkeling-tour",
     src: "/ingested/cruisingadventuresltd/img-013.webp",
     alt: "Snorkeling tour Nassau Bahamas reef",
   },
@@ -37,7 +37,7 @@ const packages = [
     title: "Swimming with Pigs",
     description:
       "Visit the famous Pig Beach and swim with the friendly Bahamian swimming pigs. A bucket-list experience for the entire family.",
-    href: "/contact",
+    href: "/swimming-with-pigs",
     src: "/ingested/cruisingadventuresltd/img-025.webp",
     alt: "Swimming with pigs Nassau Bahamas",
   },
@@ -46,7 +46,7 @@ const packages = [
     title: "ATV and Speedboat",
     description:
       "A once-in-a-lifetime escapade combining thrilling ATV rides with exhilarating speedboat cruising across the Bahamas.",
-    href: "/contact",
+    href: "/atv-speedboat-combo",
     src: "/ingested/cruisingadventuresltd/img-040.webp",
     alt: "ATV speedboat adventure combo Nassau",
   },
@@ -55,7 +55,7 @@ const packages = [
     title: "30-Minute Express Tour",
     description:
       "Short on time but craving adventure? Our Express Island Adventure is the perfect way to experience Nassau in just 30 minutes.",
-    href: "/contact",
+    href: "/express-tour",
     src: "/ingested/cruisingadventuresltd/img-007.webp",
     alt: "Express speedboat tour Nassau Bahamas",
   },

@@ -33,7 +33,7 @@ const adventures = [
     title: "Speedboat and Snorkeling Tour",
     description:
       "Take the helm of your own 2-seater speedboat and explore Nassau's crystal-clear waters. Our expert guides lead you to the best snorkeling spots in the Bahamas.",
-    href: "/book-an-adventure",
+    href: "/speedboat-snorkeling-tour",
     src: "/ingested/cruisingadventuresltd/img-010.webp",
     alt: "Woman on speedboat Nassau Bahamas turquoise water",
   },
@@ -42,7 +42,7 @@ const adventures = [
     title: "Pig Island Adventure",
     description:
       "Visit the famous Pig Beach and swim with the friendly swimming pigs of the Bahamas. An unforgettable bucket-list experience for the whole family.",
-    href: "/book-an-adventure",
+    href: "/swimming-with-pigs",
     src: "/ingested/cruisingadventuresltd/img-027.webp",
     alt: "Swimming pigs on the beach Nassau Bahamas",
   },
@@ -51,7 +51,7 @@ const adventures = [
     title: "ATV and Speed Boat Combo",
     description:
       "The best of both worlds: thrill-seeking ATV rides through Nassau followed by an exhilarating speedboat cruise across the stunning Bahamian waters.",
-    href: "/book-an-adventure",
+    href: "/atv-speedboat-combo",
     src: "/ingested/cruisingadventuresltd/img-026.webp",
     alt: "ATV and speedboat adventure combo Nassau Bahamas",
   },
